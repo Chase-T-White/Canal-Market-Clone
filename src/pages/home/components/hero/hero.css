@@ -1,0 +1,41 @@
+.main-hero {
+  padding: 25rem 6rem 0;
+}
+
+.main-hero__heading {
+  line-height: 8.6rem;
+  max-width: 103rem;
+}
+
+.main-hero__heading a {
+  padding-bottom: 0.6rem;
+  background-image: repeating-linear-gradient(
+      -45deg,
+      #ffb400,
+      #ffb400 0.1rem,
+      transparent 0,
+      transparent 1.2rem
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #ffb400,
+      #ffb400 0.1rem,
+      transparent 0,
+      transparent 1.22rem
+    );
+  background-position: 0 103%, 0.2rem 103%;
+  background-size: 1.7rem 1rem;
+  background-repeat: repeat-x;
+  animation: 0.8s infinite normal shift;
+  animation-timing-function: linear;
+}
+
+@keyframes shift {
+  0% {
+    background-position-x: 0, 0.2rem;
+  }
+
+  100% {
+    background-position-x: 1.7rem, 1.9rem;
+  }
+}

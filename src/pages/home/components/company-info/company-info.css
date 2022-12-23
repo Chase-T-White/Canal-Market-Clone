@@ -1,0 +1,27 @@
+.main-company-info {
+  padding-inline: var(--padding-inline);
+}
+
+.main-company-info-heading {
+  max-width: 65rem;
+  margin-bottom: 6rem;
+}
+
+.main-company-info__columns {
+  display: grid;
+  grid-auto-columns: minmax(40rem, 33%);
+  grid-auto-flow: column;
+  column-gap: 6rem;
+}
+
+.info__column-img {
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+  margin-bottom: 3rem;
+}
+
+.info__column-text {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
