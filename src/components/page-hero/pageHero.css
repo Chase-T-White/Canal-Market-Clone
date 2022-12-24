@@ -1,3 +1,57 @@
 .page-hero {
-  padding: 18rem 6rem 6rem;
+  position: relative;
+  padding: 18rem 6rem 10rem;
+}
+
+.page-hero__info {
+  position: absolute;
+  right: 0;
+  font-size: 1.4rem;
+}
+
+.page-hero__columns {
+  display: flex;
+}
+
+.page-hero__left {
+  width: 100%;
+}
+
+.page-hero__eyebrow {
+  display: inline-block;
+  font-size: 1.6rem;
+  transform: rotate(90deg);
+  margin-bottom: 11.5rem;
+  opacity: 0.35;
+}
+
+.page-hero__heading {
+  font-size: 20rem;
+  font-weight: 400;
+  line-height: 19rem;
+}
+
+.page-hero__right {
+  width: 41.5rem;
+  min-width: 41.5rem;
+  position: relative;
+  isolation: isolate;
+  padding-top: 11.5rem;
+}
+
+.page-hero__right img {
+  width: 100%;
+  max-width: 38rem;
+  position: relative;
+  right: 3.5rem;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.page-hero__script {
+  position: absolute;
+  top: 12%;
+  right: 0;
+  font-size: 6rem;
+  font-weight: 500;
 }

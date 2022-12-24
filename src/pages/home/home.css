@@ -9,12 +9,64 @@
 
 .main-address__columns {
   display: grid;
-  grid-auto-columns: 50%;
+  grid-auto-columns: minmax(10rem, 50%);
   grid-auto-flow: column;
   column-gap: 6rem;
 }
 
+.address-container,
+.map-container {
+  background-image: linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(180deg, #000 50%, transparent 0),
+    linear-gradient(180deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 3rem 0.1rem, 3rem 0.1rem, 0.1rem 3rem, 0.1rem 3rem;
+  animation: 0.4s infinite normal spinny;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+@keyframes spinny {
+  0% {
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+  }
+  100% {
+    background-position: 3rem 0, -3rem 100%, 0 -3rem, 100% 3rem;
+  }
+}
+
+.address-container:hover,
+.map-container:hover {
+  animation-play-state: running;
+}
+
+.address-container {
+  padding: 9rem 3rem;
+  text-align: center;
+}
+
+.address {
+  max-width: 45rem;
+  margin: auto;
+}
+
+.map-container {
+  position: relative;
+  padding: 0.1rem 0.1rem;
+  height: 100%;
+}
+
+.map-container span {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 .map {
-  inline-size: 100%;
-  object-fit: cover;
+  width: 100%;
+  position: absolute;
+  top: -25%;
 }

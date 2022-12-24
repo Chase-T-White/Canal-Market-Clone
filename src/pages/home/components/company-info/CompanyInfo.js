@@ -16,7 +16,7 @@ const CompanyInfo = () => {
         <div className='info__column'>
           <LazyLoadImage
             src={storeFront}
-            PlaceholderSrc={storeFrontLazy}
+            placeholderSrc={storeFrontLazy}
             effect='blur'
             alt='Store front with sign'
             className='info__column-img'
@@ -30,7 +30,7 @@ const CompanyInfo = () => {
         <div className='info__column'>
           <LazyLoadImage
             src={insideStore}
-            PlaceholderSrc={insideStoreLazy}
+            placeholderSrc={insideStoreLazy}
             effect='blur'
             alt='Store checkout counter'
             className='info__column-img'
@@ -42,7 +42,7 @@ const CompanyInfo = () => {
         <div className='info__column'>
           <LazyLoadImage
             src={sushiPlank}
-            PlaceholderSrc={sushiPlankLazy}
+            placeholderSrc={sushiPlankLazy}
             effect='blur'
             alt='Delicious sushi displayed on a plank'
             className='info__column-img'

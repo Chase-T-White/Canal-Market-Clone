@@ -1,0 +1,152 @@
+footer {
+  padding-inline: var(--padding-inline);
+  padding-bottom: 6rem;
+}
+
+.footer__header {
+  text-align: center;
+  padding: 6rem;
+  background-image: repeating-linear-gradient(
+      -74deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 0.1rem,
+      transparent 0,
+      transparent 0.4rem
+    ),
+    repeating-linear-gradient(
+      -74deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 0.1rem,
+      transparent 0,
+      transparent 0.4rem
+    );
+  background-position: 0 0, 0 100%;
+  background-size: 100% 1.2rem, 100% 1.2rem;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  margin-bottom: 6rem;
+}
+
+.footer__header h3 {
+  margin-bottom: 2.5rem;
+}
+
+.footer__socials {
+  display: grid;
+  grid-auto-columns: minmax(max-content, auto);
+  grid-auto-flow: column;
+  gap: 6rem;
+}
+
+.social {
+  padding-block: 6rem;
+  text-align: center;
+}
+
+.footer-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-text {
+  font-size: 1.4rem;
+}
+
+.newsletter {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  display: flex;
+
+  margin-bottom: 3rem;
+  padding: 2rem 6rem;
+}
+
+.newsletter-text {
+  flex-grow: 1;
+
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.newsletter-text span {
+  display: block;
+  max-width: 26rem;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  max-width: 70rem;
+  border: 0.1rem solid var(--clr-black);
+  padding: 2rem 3rem;
+}
+
+input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+}
+
+input::placeholder {
+  color: var(--clr-black);
+  opacity: 1;
+}
+
+button {
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.social,
+.newsletter {
+  background-image: linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(180deg, #000 50%, transparent 0),
+    linear-gradient(180deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 3rem 0.1rem, 3rem 0.1rem, 0.1rem 3rem, 0.1rem 3rem;
+  animation: 0.4s infinite normal spinny;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+@keyframes spinny {
+  0% {
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+  }
+  100% {
+    background-position: 3rem 0, -3rem 100%, 0 -3rem, 100% 3rem;
+  }
+}
+
+.social:hover,
+.newsletter:hover {
+  animation-play-state: running;
+}
+
+.legal-items {
+  display: flex;
+  gap: 14rem;
+  list-style: none;
+}
+
+.legal-items li:nth-child(3) {
+  flex-grow: 1;
+}
+
+.item {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.item > a {
+  border-bottom: 0.1rem solid #000;
+}
+
+.item:last-child > a {
+  border: none;
+}
