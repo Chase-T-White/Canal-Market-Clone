@@ -1,0 +1,50 @@
+.page-announcement {
+  padding: 11rem 0;
+  background-image: repeating-linear-gradient(
+      -45deg,
+      #000,
+      #000 0.1rem,
+      transparent 0,
+      transparent 6.8rem
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #000,
+      #000 0.1rem,
+      transparent 0,
+      transparent 6.8rem
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      #000,
+      #000 0.1rem,
+      transparent 0,
+      transparent 7.1rem
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #000,
+      #000 0.1rem transparent 0,
+      transparent 7rem
+    );
+  background-position: 0 101%, 0 101%, 0 0, 0 0;
+  background-size: 9.3rem 5rem, 9.3rem 5rem, 10rem 5rem, 10rem 5rem;
+  background-repeat: repeat-x;
+  animation: 2s infinite normal shifting;
+  animation-timing-function: linear;
+
+  display: grid;
+  grid-auto-columns: minmax(20rem 33%);
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+@keyframes shifting {
+  0% {
+    background-position: 0 101%, 0 101%, 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 9.3rem 101%, 9.3rem 101%, 10rem 0, 10rem 0;
+  }
+}

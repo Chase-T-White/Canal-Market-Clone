@@ -1,9 +1,16 @@
 import React from "react";
 import "./food.css";
-import { PageHero, Footer } from "../../components";
+import {
+  PageHero,
+  ProductGrid,
+  PageAnnouncement,
+  Footer,
+} from "../../components";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import sushiPlank from "../../assets/sushi-plank.jpg";
 import sushiPlankLazy from "../../assets/sushi-plank-lazy.jpg";
+import { foodHall } from "../../data/data";
+import { SiFoodpanda } from "react-icons/si";
 
 const Food = () => {
   const heroContent = {
@@ -24,6 +31,12 @@ const Food = () => {
   return (
     <article className='food'>
       <PageHero {...heroContent} />
+      <ProductGrid productArray={foodHall} />
+      <PageAnnouncement
+        icon={<SiFoodpanda className='food-icon' />}
+        heading={"The Best of NYC"}
+        subtext={"All under one roof!"}
+      />
       <Footer />
     </article>
   );

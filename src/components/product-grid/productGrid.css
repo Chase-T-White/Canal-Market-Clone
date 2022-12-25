@@ -1,0 +1,27 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(max-content, 33%));
+  grid-auto-flow: row;
+  row-gap: 10rem;
+
+  position: relative;
+  isolation: isolate;
+}
+
+.product__category {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.product__name {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+.product__img {
+  max-width: 25rem;
+  height: auto;
+
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+}
