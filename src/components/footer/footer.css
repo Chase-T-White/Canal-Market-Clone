@@ -85,6 +85,7 @@ input {
   border: none;
   outline: none;
   font-size: 1.4rem;
+  background-color: transparent;
 }
 
 input::placeholder {

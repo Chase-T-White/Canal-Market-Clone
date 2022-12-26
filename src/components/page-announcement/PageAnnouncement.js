@@ -4,12 +4,12 @@ import "./pageAnnouncement.css";
 const PageAnnouncement = ({ icon, heading, subtext }) => {
   return (
     <section className='page-announcement'>
-      {icon}
+      <div className='icon-container'>{icon}</div>
       <div className='announcement-text'>
         <h2 className='announcement__heading'>{heading}</h2>
         <p className='announcement__subtext'>{subtext}</p>
       </div>
-      {icon}
+      <div className='icon-container'>{icon}</div>
     </section>
   );
 };

@@ -16,7 +16,13 @@ const Food = () => {
   const heroContent = {
     page: "Food",
     heading: "The Food Hall",
-    info: "Food Hall Hours:<br><br/>Mon - Sun: 11:00AM - 8:00PM",
+    info: (
+      <p className='page-hero__info'>
+        Food Hall Hours:
+        <br></br>
+        Mon - Sun: 11:00AM - 8:00PM
+      </p>
+    ),
     img: (
       <LazyLoadImage
         src={sushiPlank}
@@ -33,7 +39,7 @@ const Food = () => {
       <PageHero {...heroContent} />
       <ProductGrid productArray={foodHall} />
       <PageAnnouncement
-        icon={<SiFoodpanda className='food-icon' />}
+        icon={<SiFoodpanda className='announcement-icon' />}
         heading={"The Best of NYC"}
         subtext={"All under one roof!"}
       />

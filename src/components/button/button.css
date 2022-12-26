@@ -4,7 +4,7 @@
   font-size: 1.6rem;
   padding: 1.6rem;
   border: 0.1rem solid #000;
-  background-color: #fff;
+  background-color: transparent;
   text-align: center;
   transition: 0.3s ease-in-out;
 }

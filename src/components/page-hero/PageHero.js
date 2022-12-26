@@ -5,7 +5,7 @@ import { CgArrowLongRight } from "react-icons/cg";
 const PageHero = ({ page, heading, info, img, script }) => {
   return (
     <section className='page-hero'>
-      <p className='page-hero__info'>{info}</p>
+      {info}
       <div className='page-hero__columns'>
         <div className='page-hero__left'>
           <span className='page-hero__eyebrow'>

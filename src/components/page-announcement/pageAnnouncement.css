@@ -1,5 +1,6 @@
 .page-announcement {
-  padding: 11rem 0;
+  padding-block: 11rem;
+  padding-inline: var(--padding-inline);
   background-image: repeating-linear-gradient(
       -45deg,
       #000,
@@ -24,7 +25,8 @@
     repeating-linear-gradient(
       45deg,
       #000,
-      #000 0.1rem transparent 0,
+      #000 0.1rem,
+      transparent 0,
       transparent 7rem
     );
   background-position: 0 101%, 0 101%, 0 0, 0 0;
@@ -34,9 +36,10 @@
   animation-timing-function: linear;
 
   display: grid;
-  grid-auto-columns: minmax(20rem 33%);
+  grid-auto-columns: minmax(20rem, 33%);
   grid-auto-flow: column;
-  align-items: center;
+  place-items: center;
+  text-align: center;
 }
 
 @keyframes shifting {
@@ -47,4 +50,37 @@
   100% {
     background-position: 9.3rem 101%, 9.3rem 101%, 10rem 0, 10rem 0;
   }
+}
+
+.announcement-icon {
+  font-size: 15rem;
+  animation: 1s infinite alternate translateY;
+  animation-timing-function: ease-in-out;
+}
+
+.announcement-icon:last-child {
+  animation-delay: 1s;
+}
+
+@keyframes translateY {
+  0% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
+
+.icon-container:last-child {
+  transform: rotateZ(180deg);
+}
+
+.announcement__heading {
+  line-height: 0.85;
+  max-width: 45rem;
+  margin-bottom: 3rem;
+}
+
+.announcement__subtext {
+  font-size: 1.8rem;
 }
